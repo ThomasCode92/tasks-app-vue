@@ -1,6 +1,12 @@
+<script setup lang="ts">
+import { ref } from "vue";
+
+const title = ref("Tasks App");
+</script>
+
 <template>
   <main>
-    <h1>Tasks App</h1>
+    <h1>{{ title }}</h1>
   </main>
 </template>
 
