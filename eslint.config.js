@@ -26,8 +26,5 @@ export default tseslint.config(
       // custom rules
     },
   },
-  {
-    extends: [eslintPluginPrettierRecommended],
-    rules: { "prettier/prettier": "warn" },
-  },
+  eslintPluginPrettierRecommended,
 );
