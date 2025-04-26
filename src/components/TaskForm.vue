@@ -3,8 +3,10 @@ import { ref } from "vue";
 
 const newTask = ref("");
 
+const emit = defineEmits<{ addTask: [newTask: string] }>();
+
 function handleSubmit() {
-  console.log(newTask.value);
+  emit("addTask", newTask.value);
 }
 </script>
 
