@@ -1,23 +1,11 @@
 <script setup lang="ts">
-import { ref } from "vue";
-
-const newTask = ref("");
-
-function handleSubmit() {
-  console.log(newTask.value);
-}
+import TaskForm from "./components/TaskForm.vue";
 </script>
 
 <template>
   <main>
     <h1>Tasks App</h1>
-    <form @submit.prevent="handleSubmit">
-      <label for="newTask">New Task</label>
-      <input id="newTask" v-model="newTask" name="newTask" />
-      <div class="button-container">
-        <button>Add</button>
-      </div>
-    </form>
+    <TaskForm />
   </main>
 </template>
 
@@ -25,10 +13,5 @@ function handleSubmit() {
 main {
   max-width: 800px;
   margin: 1rem auto;
-}
-
-.button-container {
-  display: flex;
-  justify-content: end;
 }
 </style>
