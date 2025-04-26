@@ -2,16 +2,22 @@
 import { ref } from "vue";
 
 const newTask = ref("");
+
+function handleSubmit() {
+  console.log(newTask.value);
+}
 </script>
 
 <template>
   <main>
     <h1>Tasks App</h1>
-    <form>
+    <form @submit.prevent="handleSubmit">
       <label for="newTask">New Task</label>
       <input id="newTask" v-model="newTask" name="newTask" />
+      <div class="button-container">
+        <button>Add</button>
+      </div>
     </form>
-    <h3>{{ newTask }}</h3>
   </main>
 </template>
 
@@ -19,5 +25,10 @@ const newTask = ref("");
 main {
   max-width: 800px;
   margin: 1rem auto;
+}
+
+.button-container {
+  display: flex;
+  justify-content: end;
 }
 </style>
