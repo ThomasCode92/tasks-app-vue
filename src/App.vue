@@ -1,11 +1,15 @@
 <script setup lang="ts">
 import TaskForm from "./components/TaskForm.vue";
+
+function addTask(newTask: string) {
+  console.log("New task added:", newTask);
+}
 </script>
 
 <template>
   <main>
     <h1>Tasks App</h1>
-    <TaskForm />
+    <TaskForm @add-task="addTask" />
   </main>
 </template>
 
