@@ -6,11 +6,8 @@ import type { Task } from "./types";
 const tasks = ref<Task[]>([]);
 
 function addTask(newTask: string) {
-  tasks.value.push({
-    id: crypto.randomUUID(),
-    title: newTask,
-    done: false,
-  });
+  const id = crypto.randomUUID();
+  tasks.value.push({ id, title: newTask, done: false });
 }
 </script>
 
@@ -18,6 +15,9 @@ function addTask(newTask: string) {
   <main>
     <h1>Tasks App</h1>
     <TaskForm @add-task="addTask" />
+    <article v-for="task in tasks" :key="task.id">
+      {{ task.title }}
+    </article>
   </main>
 </template>
 
