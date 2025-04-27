@@ -1,8 +1,16 @@
 <script setup lang="ts">
+import { ref } from "vue";
 import TaskForm from "./components/TaskForm.vue";
+import type { Task } from "./types";
+
+const tasks = ref<Task[]>([]);
 
 function addTask(newTask: string) {
-  console.log("New task added:", newTask);
+  tasks.value.push({
+    id: crypto.randomUUID(),
+    title: newTask,
+    done: false,
+  });
 }
 </script>
 
