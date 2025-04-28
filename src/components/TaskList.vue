@@ -6,7 +6,8 @@ const props = defineProps<{ tasks: Task[] }>();
 
 <template>
   <article v-for="task in props.tasks" :key="task.id" class="task-list">
-    {{ task.title }}
+    <input :id="task.id + '-toggle'" v-model="task.done" type="checkbox" />
+    <label :for="task.id + '-toggle'">{{ task.title }}</label>
   </article>
 </template>
 
