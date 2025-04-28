@@ -23,7 +23,7 @@ function handleSubmit() {
     <input
       id="newTask"
       v-model="newTask"
-      :aria-invalid="Boolean(error)"
+      :aria-invalid="Boolean(error) || undefined"
       @input="error = ''"
     />
     <small v-if="error" id="invalid-helper">{{ error }}</small>
