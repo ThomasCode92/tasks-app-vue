@@ -13,12 +13,18 @@ const emits = defineEmits<{ toggleDone: [id: string] }>();
       type="checkbox"
       @input="emits('toggleDone', task.id)"
     />
-    <label :for="task.id + '-toggle'">{{ task.title }} </label>
+    <label :for="task.id + '-toggle'">
+      <span :class="{ done: task.done }">{{ task.title }}</span>
+    </label>
   </article>
 </template>
 
 <style scoped>
 .task-list {
   margin-top: 1rem;
+}
+
+.done {
+  text-decoration: line-through;
 }
 </style>
