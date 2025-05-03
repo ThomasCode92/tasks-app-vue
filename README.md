@@ -1,14 +1,13 @@
 # Tasks App - Modern Vue.js Crash Course
 
 This repository contains source code created by following along with the
-[Syntax.fm YouTube Vue.js Crash Course](https://www.youtube.com/watch?v=5oKpoqmUj64).
-The video, presented by CJ, walks through the fundamentals of building front-end
-applications with Vue.js, demonstrating essential concepts and best practices.
+Syntax.fm Vue.js Crash Course on YouTube.
 
 ## 🎥 About the Video
 
 In the video this project is based on, CJ gives a crash course in building
-modern front-end apps with Vue.js, covering:
+modern front-end applications with Vue.js, walking through the fundamentals,
+essential concepts, and best practices.
 
 - 🧩 Components, props, and scoped styles
 - 📝 Lists, form state, and user input handling
@@ -54,3 +53,7 @@ pnpm run preview   # Preview the production build locally
 ```
 
 The preview server will be available at <http://localhost:4173>
+
+## 🖼️ Screenshot
+
+![screenshot](./images/screenshot.png)
