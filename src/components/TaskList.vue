@@ -9,7 +9,7 @@ const emits = defineEmits<{
 </script>
 
 <template>
-  <TransitionGroup name="task-list" tag="div">
+  <TransitionGroup name="task-list" tag="div" class="task-list">
     <article v-for="task in props.tasks" :key="task.id" class="task">
       <label :for="task.id + '-toggle'">
         <input
@@ -28,6 +28,10 @@ const emits = defineEmits<{
 </template>
 
 <style scoped>
+.task-list {
+  margin-top: 1rem;
+}
+
 .task {
   display: flex;
   align-items: center;

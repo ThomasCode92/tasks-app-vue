@@ -32,10 +32,3 @@ function handleSubmit() {
     </div>
   </form>
 </template>
-
-<style scoped>
-.button-container {
-  display: flex;
-  justify-content: end;
-}
-</style>
